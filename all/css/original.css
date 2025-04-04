@@ -1,0 +1,173 @@
+body {
+    background-color: black;
+    overflow: hidden;
+    height: 100vh;  
+}
+
+.img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.img img {
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: auto;
+    height: auto;
+    height: 100%; 
+    max-width: none;
+}
+
+.sillylove {
+    position: absolute;
+    width: 200px; 
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sillylove .eye {
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+   
+}
+
+.sillylove #eye1_1 {
+
+    right: 365px;
+    top: -125px;
+}
+
+.sillylove #eye2_1 {
+    left: 95px;
+    top: -43px;
+}
+
+.sillylove #eye2_2 {
+    left: 187px;
+    top: -30px;
+}
+
+.sillylove #eye1_2 {
+    left: -140px;
+    top: -120px;
+}
+
+
+
+
+.heart-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; 
+    height: 200px;
+    position: fixed; 
+    bottom: 20px;    
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 10;
+}
+
+
+
+
+.heart-button .heart-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    object-fit: cover; 
+    cursor: pointer;
+}
+
+
+.heart-button .heart-img:hover {
+    transform: scale(1.1);
+}
+
+.heart-eyes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; 
+    display: flex;
+}
+
+
+.heart-eye {
+    width: 100px;  
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s ease-in-out;
+    animation: heartbeat 1.5s ease-in-out infinite;  
+}
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* Başlangıç ve bitişte göz normal boyutunda */
+    }
+    25% {
+        transform: scale(1.2);  /* İlk büyüme */
+    }
+    50% {
+        transform: scale(1.4);  /* En büyük büyüme */
+    }
+    75% {
+        transform: scale(1.2);  /* Geri dönüş */
+    }
+}
+
+.heart-eye {
+    animation: heartbeat 0.3s ease-in-out infinite; /* Animasyon süresi çok kısa */
+}
+
+
+#heartEye3 {
+    position: absolute; 
+    top: -30px; 
+    right: 110px; 
+    background-image: url('../images/heart.png');
+    width: 100px; 
+    height: 100px;
+    background-size: cover;  
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+#heartEye4 {
+    position: absolute; 
+    top: -30px; 
+    right: 245px; 
+    background-image: url('../images/heart.png');
+    width: 100px; 
+    height: 100px;
+    background-size: cover;  
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* eye1_1 ve eye1_2 gözlerini gizlemek için bir sınıf */
+.hide {
+    display: none;
+}
+
+/* Gözlerin animasyonlarının tanımlandığı stil */
+.sillylove #eye1_1,
+.sillylove #eye1_2 {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Diğer gözler için de aynı şekilde gizleme ve animasyon */
